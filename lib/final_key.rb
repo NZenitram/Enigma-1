@@ -12,13 +12,11 @@ class FinalKey
   end
 
   def combine
-    @key.key_gen
     @first_key << @key.key_gen.join[0] + @key.key_gen.join[1]
     @first_key << @key.key_gen.join[1] + @key.key_gen.join[2]
     @first_key << @key.key_gen.join[2] + @key.key_gen.join[3]
     @first_key << @key.key_gen.join[3] + @key.key_gen.join[4]
     @first_key.map! {|num| num.to_i}
-    final_key
   end
 
   def final_key
@@ -32,3 +30,4 @@ class FinalKey
 end
 n = FinalKey.new
 n.combine
+n.final_key

@@ -34,7 +34,7 @@ class Cipher
   def rotate_1
     rotated_characters = alpha.rotate(@final_key[0])
     pairs = alpha.zip(rotated_characters).to_h
-    #Hash[pairs]
+    # Hash[pairs]
   end
 
   def rotate_2
